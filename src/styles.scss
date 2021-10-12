@@ -27,6 +27,16 @@
 // @import "~bootstrap/scss/variables";
 // @import "~bootstrap/scss/mixins";
 // @import "~ngx-toastr/toastr-bs4-alert";
+.modal-content {
+  border-radius: 7px;
+}
+.modal-backdrop.fade {
+  opacity: 0.5;
+}
+.modal-open .modal {
+  opacity: 1;
+}
+
 .h-35 {
   height: 35px !important;
 }
@@ -592,7 +602,7 @@
     }
 
     .form-control {
-      border: transparent !important;
+      // border: transparent !important;
       height: 33px !important;
 
       &::placeholder {

@@ -56,6 +56,8 @@ export class AppComponent {
   @ViewChild('grid') public grid: TreeGridComponent;
 
   @ViewChild('columnStyleModal') ejDialog: ElementRef;
+  @ViewChild('displayColumnsModal') displayColumnsModal: ElementRef;
+  @ViewChild('sortSettingsModal') sortSettingsModal: ElementRef;
   public toolbar: string[];
   public sortSetting: SortSettingsModel;
   public selectitem: string[];
@@ -352,7 +354,7 @@ export class AppComponent {
       this.grid.deleteRecord();
     }
     if (args.item.id === 'multi-select') {
-      this.modalService.open(this.ejDialog, {
+      this.modalService.open(this.sortSettingsModal, {
         centered: true,
         windowClass: 'routeDripPopup',
         backdrop: 'static',
